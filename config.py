@@ -12,7 +12,7 @@ parser.add_argument('--schedule', default='warmup_linear', help="schedule for op
 parser.add_argument('--weight_decay', default=0.01, type=float, help="")
 parser.add_argument('--warmup', default=0.1, type=float, help="")
 
-parser.add_argument('--model_dir', default='experiments/baseline', help="model directory")
+parser.add_argument('--model_dir', default='experiments/debug', help="model directory")
 parser.add_argument('--epoch_num', default=3, type=int, help="num of epoch")
 parser.add_argument('--nega_num', default=4, type=int, help="num of negative predicates")
 parser.add_argument('--batch_size', default=32, type=int,  help="batch size")

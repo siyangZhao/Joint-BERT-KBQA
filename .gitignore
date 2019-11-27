@@ -7,4 +7,3 @@ experiments
 __pycache__
 server.py
 statistics.py
-run.sh

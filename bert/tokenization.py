@@ -118,6 +118,7 @@ class BertTokenizer(object):
         """Converts a sequence of tokens into ids using the vocab."""
         ids = []
         for token in tokens:
+            # TODO modified by fubang
             ids.append(self.vocab.get(token, self.vocab['[UNK]']))
         if len(ids) > self.max_len:
             logger.warning(

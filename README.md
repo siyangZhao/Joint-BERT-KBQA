@@ -40,11 +40,30 @@ tqdm==4.31.1
 ```
 
 ## Usage
-```
+
 1. 用`nega_sampling.py`完成对训练数据的负采样；
 2. 用`graph.py`处理图谱数据，序列化为字典；
 3. 在`config.py`中配置超参；
 4. 写`run.sh`，选择训练、验证还是测试模式。
+
+训练：
+```
+export CUDA_VISIBLE_DEVICES=1
+python main.py \
+    --do_train_and_eval \
+    --model_dir experiments/debug \
+    --nega_num 8 \
+    --learning_rate 5e-5 \
+    --batch_size 32 \
+    --epoch_num 3
+```
+
+预测：
+```
+export CUDA_VISIBLE_DEVICES=1
+python main.py \
+    --do_predict \
+    --model_dir experiments/debug \
 ```
 
 ## Result

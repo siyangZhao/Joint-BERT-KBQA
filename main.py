@@ -171,9 +171,6 @@ if __name__ == '__main__':
     if args.do_predict:
         utils.load_checkpoint(os.path.join(args.model_dir, 'best.pth.tar'), model)
         model.eval()
-        logging.info('Loading graph and entity linking...')
-        graph = pickle.load(open('graph/graph.pkl', 'rb'))
-        entity_linking = pickle.load(open('graph/entity_linking.pkl', 'rb'))
         while True:
             try:
                 logging.info('请输入问题：')

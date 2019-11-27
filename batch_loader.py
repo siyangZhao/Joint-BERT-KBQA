@@ -78,7 +78,6 @@ class BatchLoader(object):
             re_data.append(re_sample)
         return re_data
 
-
     def batch_loader(self, ner_data=None, re_data=None, ner_max_len=32, re_max_len=64, batch_size=32, is_train=True):
         if is_train: # input all three datas
             ner_dataset = self._build_dataset(ner_data, None, ner_max_len)
