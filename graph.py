@@ -16,10 +16,10 @@ with open(file_path, 'r', encoding='utf-8') as f:
         s = s.lower()
         p = p.replace(' ', '')
         o = o.lower()
-        graph[s].append((s, p, o))
+        graph[s].append((s, p, o)) #{s:[(s,p,o),()...]}
         if '(' in s:
             s1 = s.split('(')[0]
-            entity_linking[s1].add(s)
+            entity_linking[s1].add(s) #{'李冀川':{'李冀川(成都电视台《道听途说》节目主持人)'}, '自然语言处理':{《自然语言处理》}}
         if s[0] =='《' and s[-1] == '》':
             entity_linking[s[1:-1]].add(s)
         

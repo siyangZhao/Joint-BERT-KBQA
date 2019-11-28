@@ -5,7 +5,7 @@ import os
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', default='data', help="Directory containing the dataset")
 parser.add_argument('--bert_model_dir', default='/root/pretrain_model_weights/torch/chinese/chinese_wwm_ext_pytorch', help="Directory containing the BERT model in PyTorch")
-
+#####################################################
 parser.add_argument('--clip_grad', default=2, type=int, help="")
 parser.add_argument('--seed', default=42, type=int, help="random seed for initialization") # 8
 parser.add_argument('--schedule', default='warmup_linear', help="schedule for optimizer")
